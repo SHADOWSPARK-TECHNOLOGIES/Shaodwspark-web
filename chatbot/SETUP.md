@@ -1,7 +1,7 @@
 # ShadowSpark Chatbot — Install Guide
 
 A floating chat bubble that explains ShadowSpark's services, powered by Claude Haiku 4.5.
-Runs entirely on Vercel as a serverless function — no GCP, no extra service, no extra billing.
+The chat route ships with the Next.js app on Railway. Set `ANTHROPIC_API_KEY` on that service.
 
 ## What's included
 1. `route.ts` — the API endpoint that talks to Claude (with your ShadowSpark knowledge baked in)
@@ -40,27 +40,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 }
 ```
 
-### 3. Add your Anthropic API key to Vercel
+### 3. Add your Anthropic API key on Railway
 
-```bash
-vercel env add ANTHROPIC_API_KEY production
-vercel env add ANTHROPIC_API_KEY preview
-# paste your sk-ant-... key when prompted (it won't show in terminal history)
-```
+Set `ANTHROPIC_API_KEY` on the Railway service. For local runs, put the same variable in `.env.local`.
 
 Get a key at: https://console.anthropic.com/settings/keys
 
 ## Deploy
 
-```bash
-vercel --prod
-```
+Deploy the Next.js app on Railway. The chat route is part of that service (`pnpm build`, then `pnpm start`).
 
 ## Test locally first (optional)
 
 ```bash
-# pull the env var down locally
-vercel env pull .env.local
 pnpm dev
 # open http://localhost:3000 — the bubble appears bottom-right
 ```

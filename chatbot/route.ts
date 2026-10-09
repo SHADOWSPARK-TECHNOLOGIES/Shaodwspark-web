@@ -1,6 +1,6 @@
 // app/api/chat/route.ts
-// ShadowSpark site chatbot — Claude-powered, runs as a Vercel serverless function.
-// Requires env var: ANTHROPIC_API_KEY  (add via `vercel env add ANTHROPIC_API_KEY production`)
+// ShadowSpark site chatbot — Claude-powered Next.js route hosted on Railway.
+// Requires env var: ANTHROPIC_API_KEY (set on the Railway service).
 
 import { NextRequest, NextResponse } from "next/server";
 
@@ -14,7 +14,7 @@ ShadowSpark Technologies is a software architecture and engineering studio based
 
 SERVICES & EXPERTISE:
 - AI Agent Systems: Autonomous multi-agent pipelines using Claude, Gemini, and custom LLM orchestration — chatbots through to fully agentic task runners with tool use, memory, and context management.
-- Cloud Architecture: Production infrastructure on AWS (ECR, App Runner, Bedrock), GCP, and Vercel. Containerised microservices, CI/CD pipelines, multi-cloud strategies.
+- Cloud Architecture: Production infrastructure on AWS (ECR, App Runner, Bedrock), GCP, and Railway. Containerised microservices, CI/CD pipelines, multi-cloud strategies.
 - Fintech Engineering: Multi-tenant payment systems, wallet infrastructure, Paystack integration, fraud detection, regulatory-compliant platforms for the Nigerian and African fintech market.
 - Full-Stack Web Apps: Next.js, TypeScript, Prisma ORM, Neon PostgreSQL, server components, RBAC auth, real-time features, mobile-first UIs.
 - PropTech Platforms: AI-powered rental and property platforms. Built Lodgist — an end-to-end listing, booking, and tenant management system with AI-driven search and matching.
